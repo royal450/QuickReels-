@@ -2,7 +2,7 @@ services:
   - type: web
     name: sarkdownloader-api
     runtime: python
-    repo:  https://github.com/royal450/QuickReels # अपना repo link डालना
+    repo:  https://github.com/royal450/QuickReels- # अपना repo link डालना
     plan: free
     envVars:
       - key: PYTHON_VERSION
