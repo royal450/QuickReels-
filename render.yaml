@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: sarkdownloader-api
+    runtime: python
+    repo:  https://github.com/royal450/QuickReels # अपना repo link डालना
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /ping
+    autoDeploy: true
